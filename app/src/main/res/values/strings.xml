@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pengaduan PDAM</string>
+    <string name="nama">Nama</string>
+    <string name="no_sambung">No Sambung</string>
+    <string name="alamat">Alamat</string>
+    <string name="pengaduan">Pengaduan</string>
+</resources>
