@@ -73,9 +73,10 @@ public class CekMeter extends AppCompatActivity {
                                 JSONObject data = response.getJSONObject(i);
                                 ModelData md = new ModelData();
                                 md.setId(data.getString("id"));
-                                md.setTanggal_meter(data.getString("tanggal_meter"));
                                 md.setMeter(data.getString("meter"));
                                 md.setNo_sambung(data.getString("no_sambung"));
+                                md.setBulan_meter(data.getString("bulan_meter"));
+                                md.setTahun_meter(data.getString("tahun_meter"));
                                 mItems.add(md);
                                 //Toast.makeText(DetailLaporan.this, data.toString(), Toast.LENGTH_SHORT).show();
 

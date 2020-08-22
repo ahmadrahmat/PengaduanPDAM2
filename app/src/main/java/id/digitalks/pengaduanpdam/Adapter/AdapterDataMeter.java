@@ -52,17 +52,7 @@ public class AdapterDataMeter extends RecyclerView.Adapter<AdapterDataMeter.Hold
 
         //holder.tvMeter.setText(md.getMeter());
 
-        String strCurrentDate= md.getTanggal_meter();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date newDate = null;
-        try {
-            newDate = format.parse(strCurrentDate);
-            format = new SimpleDateFormat("dd MMM yyyy");
-            String date = format.format(newDate);
-            holder.tvTanggalMeter.setText(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        holder.tvTanggalMeter.setText(md.getBulan_meter() +" "+md.getTahun_meter());
 
         holder.tvNoSambung.setText(md.getNo_sambung());
 
