@@ -8,4 +8,5 @@ public class ServerAPI {
     public static final String URL_INSERT = "http://mobile.sippdam.com/create_data.php";
     public static final String URL_DELETE = "http://mobile.sippdam.com/delete_data.php";
     public static final String URL_UPDATE = "http://mobile.sippdam.com/update_data.php";
+    public static final String URL_INFORMASI = "http://mobile.sippdam.com/view_informasi.php";
 }

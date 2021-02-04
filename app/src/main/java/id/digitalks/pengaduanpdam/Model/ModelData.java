@@ -1,11 +1,12 @@
 package id.digitalks.pengaduanpdam.Model;
 
 public class ModelData {
-    String id_pengaduan, nama, no_sambung, alamat, pengaduan, penyelesaian_pengaduan, id_petugas, status, created_at, updated_at, tanggal_pengaduan, id, meter, bulan_meter, tahun_meter;
+    String id_pengaduan, nama, no_sambung, alamat, pengaduan, penyelesaian_pengaduan, id_petugas, status, created_at, updated_at,
+            tanggal_pengaduan, id, meter, bulan_meter, tahun_meter, isi_informasi, tgl_informasi, status_informasi;
 
     public ModelData(){}
 
-    public ModelData(String id_pengaduan, String nama, String no_sambung, String alamat, String pengaduan, String penyelesaian_pengaduan, String id_petugas, String status, String created_at, String updated_at, String tanggal_pengaduan, String id, String meter, String bulan_meter, String tahun_meter) {
+    public ModelData(String id_pengaduan, String nama, String no_sambung, String alamat, String pengaduan, String penyelesaian_pengaduan, String id_petugas, String status, String created_at, String updated_at, String tanggal_pengaduan, String id, String meter, String bulan_meter, String tahun_meter, String isi_informasi, String tgl_informasi, String status_informasi) {
         this.id_pengaduan = id_pengaduan;
         this.nama = nama;
         this.no_sambung = no_sambung;
@@ -21,6 +22,33 @@ public class ModelData {
         this.meter = meter;
         this.bulan_meter = bulan_meter;
         this.tahun_meter = tahun_meter;
+        this.isi_informasi = isi_informasi;
+        this.tgl_informasi = tgl_informasi;
+        this.status_informasi = status_informasi;
+    }
+
+    public String getIsi_informasi() {
+        return isi_informasi;
+    }
+
+    public void setIsi_informasi(String isi_informasi) {
+        this.isi_informasi = isi_informasi;
+    }
+
+    public String getTgl_informasi() {
+        return tgl_informasi;
+    }
+
+    public void setTgl_informasi(String tgl_informasi) {
+        this.tgl_informasi = tgl_informasi;
+    }
+
+    public String getStatus_informasi() {
+        return status_informasi;
+    }
+
+    public void setStatus_informasi(String status_informasi) {
+        this.status_informasi = status_informasi;
     }
 
     public String getBulan_meter() {

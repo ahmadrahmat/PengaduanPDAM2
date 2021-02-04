@@ -229,6 +229,74 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            app:cardElevation="3dp"
+                            app:cardCornerRadius="5dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:background="@color/colorPrimary">
+
+                                <TextView
+                                    android:id="@+id/tvInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="INFORMASI"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:drawableLeft="@drawable/ic_info"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center_horizontal" />
+
+                                <TextView
+                                    android:id="@+id/tvInfoDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:layout_below="@+id/tvInfoTgl"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center_horizontal" />
+
+                                <TextView
+                                    android:id="@+id/tvInfoTgl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textStyle="italic"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:layout_below="@+id/tvInfo"
+                                    android:layout_centerHorizontal="true"
+                                    android:gravity="center_horizontal" />
+
+                                <Button
+                                    android:id="@+id/buttonInfo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"/>
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </RelativeLayout>
