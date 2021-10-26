@@ -24,12 +24,12 @@
 
     <Button
         android:id="@+id/ok"
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
         android:layout_alignEnd="@+id/dialog"
         android:layout_alignRight="@+id/dialog"
-        android:layout_below="@+id/logo"
-        android:text="OK" />
+        android:layout_marginTop="15dp"
+        android:text="LOGOUT" />
 
 </LinearLayout>

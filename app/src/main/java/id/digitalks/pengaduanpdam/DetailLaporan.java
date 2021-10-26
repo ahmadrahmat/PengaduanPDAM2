@@ -5,11 +5,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -40,11 +46,17 @@ public class DetailLaporan extends AppCompatActivity {
     ProgressDialog pd;
     String intent_nosambung, intent_idpengaduan;
     Button btnKembali;
+    ProgressBar mProgressBar;
+
+    CountDownTimer mCountDownTimer;
+    int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_laporan);
+
+
 
         // get data from intent
         Intent data = getIntent();
@@ -59,11 +71,40 @@ public class DetailLaporan extends AppCompatActivity {
         pd = new ProgressDialog(DetailLaporan.this);
         mItems = new ArrayList<>();
 
+        mProgressBar=findViewById(R.id.progressBar);
+        mProgressBar.setProgress(i);
+        mProgressBar.setVisibility(View.GONE);
+
         if (cek == 0) {
-            loadjson(intent_nosambung);
+            mProgressBar.setVisibility(View.VISIBLE);
+            mCountDownTimer=new CountDownTimer(3000,500) {
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    Log.v("Log_tag", "Tick of Progress"+ i+ millisUntilFinished);
+                    i++;
+                    mProgressBar.setProgress((int)i*100/(3000/500));
+                }
+
+                @Override
+                public void onFinish() {
+                    //Do what you want
+                    loadjson(intent_nosambung);
+                    i++;
+                    mProgressBar.setProgress(100);
+                    mProgressBar.setVisibility(View.GONE);
+                }
+            };
+            mCountDownTimer.start();
         } else {
             loadjsonbyidpengaduan(intent_idpengaduan);
         }
+
+
+
+
+
+
 
         mManager = new LinearLayoutManager(DetailLaporan.this, LinearLayoutManager.VERTICAL, false);
         mRecyclerview.setLayoutManager(mManager);

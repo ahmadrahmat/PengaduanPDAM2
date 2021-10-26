@@ -3,7 +3,9 @@ package id.digitalks.pengaduanpdam;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,12 +37,13 @@ public class LaporPengaduan extends AppCompatActivity {
     Spinner spinnerPengaduan;
     Button btnLapor, btnBatal;
     ProgressDialog pd;
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lapor_pengaduan);
-
+        sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
         nama = (EditText) findViewById(R.id.edt_nama);
         noSambung = (EditText) findViewById(R.id.edt_no_sambung);
         alamat = (EditText) findViewById(R.id.edt_alamat);
@@ -48,6 +51,9 @@ public class LaporPengaduan extends AppCompatActivity {
         btnLapor = (Button) findViewById(R.id.btn_lapor);
         btnBatal = (Button) findViewById(R.id.btn_batal);
         pd = new ProgressDialog(LaporPengaduan.this);
+
+        noSambung.setEnabled(false);
+        noSambung.setText(sharedpreferences.getString("username","null"));
 
         // select/spinner
         spinnerPengaduan = (Spinner) findViewById(R.id.spinner_pengaduan);

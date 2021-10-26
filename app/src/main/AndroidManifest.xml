@@ -14,9 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CekMeter"
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CekMeter"
             android:label="Meter Pelanggan"
-            android:theme="@style/AppThemeActionBar"></activity>
+            android:theme="@style/AppThemeActionBar" />
         <activity
             android:name=".CekRiwayat"
             android:label="Riwayat Pengaduan"
@@ -31,7 +35,7 @@
             android:label="Lapor Pengaduan PDAM"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppThemeActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

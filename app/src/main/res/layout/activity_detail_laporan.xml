@@ -7,7 +7,12 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".DetailLaporan">
+<ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
+</ProgressBar>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewTempDetail"
         android:layout_width="match_parent"

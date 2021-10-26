@@ -1,6 +1,7 @@
 package id.digitalks.pengaduanpdam.Util;
 
 public class ServerAPI {
+    public static final String URL_LOGIN = "http://mobile.sippdam.com/login.php";
     public static final String URL_DATA = "http://mobile.sippdam.com/view_data.php";
     public static final String URL_DATABYID = "http://mobile.sippdam.com/view_data_by_id.php";
     public static final String URL_DATABYIDPENGADUAN = "http://mobile.sippdam.com/view_data_by_idpengaduan.php";
